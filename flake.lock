@@ -50,28 +50,29 @@
         "type": "github"
       }
     },
-    "nixpkgs-vte-gtk4": {
-      "locked": {
-        "lastModified": 1655512730,
-        "narHash": "sha256-OvrV0eOlT4wUORRJ/M8Zoo6vqm1Nhzqh7M+3IoeO2kI=",
-        "owner": "mitchmindtree",
-        "repo": "nixpkgs",
-        "rev": "dd502acaf00d7001313337d39e31c0ca3ce7b8de",
-        "type": "github"
-      },
-      "original": {
-        "owner": "mitchmindtree",
-        "ref": "vte-master-gtk4",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "blackbox-src": "blackbox-src",
         "marble-src": "marble-src",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-vte-gtk4": "nixpkgs-vte-gtk4"
+        "vte-src": "vte-src"
+      }
+    },
+    "vte-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1652120268,
+        "narHash": "sha256-VsRrww0KpQbDQH7ClAoocLzhR0grNPKZvYcCJFdYqaU=",
+        "ref": "master",
+        "rev": "b51feeca889d4b597e95b21bc77dc078892af11d",
+        "revCount": 5173,
+        "type": "git",
+        "url": "https://gitlab.gnome.org/gnome/vte"
+      },
+      "original": {
+        "ref": "master",
+        "type": "git",
+        "url": "https://gitlab.gnome.org/gnome/vte"
       }
     }
   },

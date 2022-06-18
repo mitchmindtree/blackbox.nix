@@ -12,12 +12,11 @@
       url = "git+https://gitlab.gnome.org/raggesilver/marble?ref=wip/gtk4";
       flake = false;
     };
+    vte-src = {
+      url = "git+https://gitlab.gnome.org/gnome/vte?ref=master";
+      flake = false;
+    };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    # A fork of `nixos-unstable` with a patch for `vte` enabling gtk4 support.
-    # Should remove this in favour of `nixpkgs` once gtk4 lands upstream.
-    # See diff here:
-    # https://github.com/NixOS/nixpkgs/compare/nixos-unstable...mitchmindtree:vte-master-gtk4?expand=1
-    nixpkgs-vte-gtk4.url = "github:/mitchmindtree/nixpkgs/vte-master-gtk4";
   };
 
   outputs = inputs: let
@@ -25,13 +24,15 @@
       pkgs = inputs.nixpkgs.legacyPackages.${system};
     in {
       packages.${system} = rec {
+        vte-gtk4 = pkgs.callPackage ./vte-gtk4.nix {
+          inherit (inputs) vte-src;
+        };
         marble = pkgs.callPackage ./marble.nix {
           inherit (inputs) marble-src;
         };
         blackbox = pkgs.callPackage ./default.nix {
           inherit (inputs) blackbox-src;
-          inherit marble;
-          vte-gtk4 = inputs.nixpkgs-vte-gtk4.legacyPackages.${system}.vte;
+          inherit marble vte-gtk4;
         };
         default = blackbox;
       };
