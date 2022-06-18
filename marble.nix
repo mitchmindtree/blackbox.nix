@@ -1,16 +1,15 @@
-{
-  marble-src ? null,
-  lib,
-  stdenv,
-  desktop-file-utils,
-  fetchFromGitLab,
-  gobject-introspection,
-  gtk3,
-  gtk4,
-  meson,
-  ninja,
-  pkg-config,
-  vala
+{ lib
+, stdenv
+, desktop-file-utils
+, fetchFromGitLab
+, gobject-introspection
+, gtk3
+, gtk4
+, meson
+, ninja
+, pkg-config
+, vala
+, marble-src ? null
 }:
 stdenv.mkDerivation {
   pname = "marble";

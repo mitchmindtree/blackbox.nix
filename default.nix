@@ -1,28 +1,27 @@
-{
-  blackbox-src ? null,
-  desktop-file-utils,
-  lib,
-  stdenv,
-  cmake,
-  fetchFromGitLab,
-  gettext,
-  gtk4,
-  json-glib,
-  libadwaita,
-  librsvg,
-  libsForQt5,
-  marble,
-  meson,
-  ninja,
-  pcre,
-  pkg-config,
-  qt5,
-  python3,
-  vala,
-  #vte,
-  vte-gtk4,
-  wrapGAppsHook4,
-}: stdenv.mkDerivation {
+{ desktop-file-utils
+, lib
+, stdenv
+, cmake
+, fetchFromGitLab
+, gettext
+, gtk4
+, json-glib
+, libadwaita
+, librsvg
+, marble
+, meson
+, ninja
+, pcre
+, pkg-config
+, qt5
+, python3
+, vala
+#, vte
+, vte-gtk4
+, wrapGAppsHook4
+, blackbox-src ? null
+}:
+stdenv.mkDerivation {
   pname = "blackbox";
   version = "main";
   src = if blackbox-src != null then blackbox-src else fetchFromGitLab {
