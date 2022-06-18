@@ -1,0 +1,80 @@
+{
+  "nodes": {
+    "blackbox-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1654745531,
+        "narHash": "sha256-X/cr3fjmzhtHJHliMtxlUQP3KssEh/B8ZeeZyWyuD/8=",
+        "ref": "main",
+        "rev": "e0f2fbfcde64251a0083715c295cd91ba6e0a2a1",
+        "revCount": 107,
+        "type": "git",
+        "url": "https://gitlab.gnome.org/raggesilver/blackbox"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "https://gitlab.gnome.org/raggesilver/blackbox"
+      }
+    },
+    "marble-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1650416394,
+        "narHash": "sha256-0VJ9nyjWOOdLBm3ufleS/xcAS5YsSedJ2NtBjyM3uaY=",
+        "ref": "wip/gtk4",
+        "rev": "6dcc6fefa35f0151b0549c01bd774750fe6bdef8",
+        "revCount": 31,
+        "type": "git",
+        "url": "https://gitlab.gnome.org/raggesilver/marble"
+      },
+      "original": {
+        "ref": "wip/gtk4",
+        "type": "git",
+        "url": "https://gitlab.gnome.org/raggesilver/marble"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1655400192,
+        "narHash": "sha256-49OBVVRgb9H/PSmNT9W61+NRdDbuSJVuDDflwXlaUKU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3d7435c638baffaa826b85459df0fff47f12317d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-vte-gtk4": {
+      "locked": {
+        "lastModified": 1655512730,
+        "narHash": "sha256-OvrV0eOlT4wUORRJ/M8Zoo6vqm1Nhzqh7M+3IoeO2kI=",
+        "owner": "mitchmindtree",
+        "repo": "nixpkgs",
+        "rev": "dd502acaf00d7001313337d39e31c0ca3ce7b8de",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mitchmindtree",
+        "ref": "vte-master-gtk4",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "blackbox-src": "blackbox-src",
+        "marble-src": "marble-src",
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-vte-gtk4": "nixpkgs-vte-gtk4"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
