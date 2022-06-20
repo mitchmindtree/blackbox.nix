@@ -4,6 +4,7 @@
   stdenv,
   cmake,
   fetchFromGitLab,
+  fetchpatch,
   gettext,
   gtk4,
   json-glib,
@@ -37,6 +38,13 @@ stdenv.mkDerivation {
         sha256 = "sha256-iVdwGW897vsqG/DXgewm5udnzlWFWF07T8f3lA45bVA=";
       };
   dontStrip = true;
+  patches = [
+    (fetchpatch {
+      name = "yilozt_launch_fix.diff";
+      url = https://raw.githubusercontent.com/yilozt/pkgbuilds/main/terminal-gtk4-git/launch_fix.diff;
+      sha256 = "sha256-nrA9Fdr++B11h5LedBfvebGxK92HTzdyuSBOOSY3Z44=";
+    })
+  ];
   postPatch = ''
     patchShebangs build-aux/meson/postinstall.py
   '';
