@@ -4,6 +4,7 @@
   stdenv,
   cmake,
   fetchFromGitLab,
+  fetchpatch,
   gettext,
   gtk4,
   json-glib,
@@ -37,6 +38,13 @@ stdenv.mkDerivation {
         sha256 = "sha256-iVdwGW897vsqG/DXgewm5udnzlWFWF07T8f3lA45bVA=";
       };
   dontStrip = true;
+  patches = [
+    (fetchpatch {
+      name = "terminal_from_variant.diff";
+      url = https://gitlab.gnome.org/raggesilver/blackbox/-/snippets/3660/raw/main/terminal_from_variant.diff;
+      sha256 = "sha256-ZHd/IsszbCEviuMVCAA5+Jm+2YTzFF2bdF6euvJJv7I=";
+    })
+  ];
   postPatch = ''
     patchShebangs build-aux/meson/postinstall.py
   '';
