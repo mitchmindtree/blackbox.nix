@@ -3,11 +3,11 @@
     "blackbox-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1654745531,
-        "narHash": "sha256-X/cr3fjmzhtHJHliMtxlUQP3KssEh/B8ZeeZyWyuD/8=",
+        "lastModified": 1660669382,
+        "narHash": "sha256-8u4qHC8+3rKDFNdg5kI48dBgAm3d6ESXN5H9aT/nIBY=",
         "ref": "main",
-        "rev": "e0f2fbfcde64251a0083715c295cd91ba6e0a2a1",
-        "revCount": 107,
+        "rev": "c9ed9fd1e50b5be15ed0529e3536c63aa4b23553",
+        "revCount": 247,
         "type": "git",
         "url": "https://gitlab.gnome.org/raggesilver/blackbox"
       },
@@ -36,11 +36,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1655400192,
-        "narHash": "sha256-49OBVVRgb9H/PSmNT9W61+NRdDbuSJVuDDflwXlaUKU=",
+        "lastModified": 1660819943,
+        "narHash": "sha256-TRZV/mlW1eYuojqDC3ueYWj7jsTKXJCtyMLNYX/Ybtw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3d7435c638baffaa826b85459df0fff47f12317d",
+        "rev": "8ea014acc33da95ea56c902229957d8225005163",
         "type": "github"
       },
       "original": {
@@ -61,11 +61,11 @@
     "vte-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1652120268,
-        "narHash": "sha256-VsRrww0KpQbDQH7ClAoocLzhR0grNPKZvYcCJFdYqaU=",
+        "lastModified": 1660860193,
+        "narHash": "sha256-Th7Jlll9DIGuB4dySAfTGI6TXyTl0AfRE0EgT0exrJs=",
         "ref": "master",
-        "rev": "b51feeca889d4b597e95b21bc77dc078892af11d",
-        "revCount": 5173,
+        "rev": "b4abc09b0950e2b1593782116b7fa9fc2e7ffba1",
+        "revCount": 5209,
         "type": "git",
         "url": "https://gitlab.gnome.org/gnome/vte"
       },
