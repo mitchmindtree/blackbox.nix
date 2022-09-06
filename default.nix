@@ -41,8 +41,8 @@ stdenv.mkDerivation {
   patches = [
     (fetchpatch {
       name = "yilozt_launch_fix.diff";
-      url = https://raw.githubusercontent.com/yilozt/pkgbuilds/main/terminal-gtk4-git/launch_fix.diff;
-      sha256 = "sha256-nrA9Fdr++B11h5LedBfvebGxK92HTzdyuSBOOSY3Z44=";
+      url = https://raw.githubusercontent.com/yilozt/pkgbuilds/main/blackbox-terminal-git/launch_fix.diff;
+      sha256 = "sha256-/9aNLSrKg8IY6CvQHzfmGu9PnN5ik/cCYPZ1XgkgOSQ=";
     })
   ];
   postPatch = ''
